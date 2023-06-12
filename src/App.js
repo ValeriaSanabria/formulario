@@ -1,37 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
-import { Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion } from './elementos/Formulario';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ComponenteInput from './componentes/Input'
+import ComponenteTerminos from './componentes/Terminos';
+
 function App() {
   return (
     <main>
-      <Formulario>
-        <div>
-          <Label htmlForm="nombre">Nombre completo</Label>
-          <GrupoInput>
-            <Input type="text" placeholder="nombre completo" id="nombre"/>
-            <IconoValidacion icon={faCheckCircle} />
-          </GrupoInput>
+      <div className='formulario'>
+        <ComponenteInput 
+          label="Nombre Completo"
+          placeholder="Juan Perez"
+          id="nombre"/>
+        <ComponenteInput 
+          label="Ciudad"
+          placeholder="Ingrese ciudad"
+          id="ciudad"/>
+        <ComponenteInput 
+          label="Email"
+          placeholder="email@correo.com"
+          type="email"
+          id="email"/>
+        <ComponenteInput 
+          label="Numero de telefono"
+          placeholder="2901xxxxxx"
+          type="number"
+          id="telefono"/>
+
+        <ComponenteTerminos
+          label="Soy mayor de 18 años" 
+          id="edad"/>
+          <ComponenteTerminos
+          label="Acepto los terminos y condiciones"
+          id="terminos" />
+
+        {/* {false && <MensajeError>
+          <p>
+            <FontAwesomeIcon icon={faExclamationTriangle}/>
+            <b>Error:</b> Por favor rellena el formulario correctamente.
+          </p>
+        </MensajeError>} */}
+
+        <div className="contenedorBotonCentrado">
+          <button type='submit'>Enviar</button>
+          <p className="mensajeExito">Formulario enviado exitosamente!</p>
         </div>
-        <div>
-          <Label htmlForm='email'>Email</Label>
-          <GrupoInput>
-            <Input type="email" placeholder="email@correo.com" id='email'/>
-            <IconoValidacion icon={faCheckCircle} />
-          </GrupoInput>
-          <LeyendaError>El email debe contener "@"</LeyendaError>
-        </div>
-        <div>
-          <Label htmlFor='edad'>
-            <input type="checkbox" name="edad" id="edad" />
-            Soy mayor de 18 años
-          </Label>
-          <Label htmlFor='terminos'>
-            <input type="checkbox" name="terminos" id="terminos" />
-            Acepto los Terminos y Condiciones
-          </Label>
-        </div>
-      </Formulario>
+      </div>
     </main>
     );
 
