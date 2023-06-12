@@ -1,7 +1,7 @@
-import React from "react";
 import './formularios.css'
 
 const ComponenteTerminos = (props) =>{
+
     return(
         <div className="contenedorTerminos">
           <label htmlFor={props.id}>

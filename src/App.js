@@ -1,6 +1,4 @@
 import './App.css';
-import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ComponenteInput from './componentes/Input'
 import ComponenteTerminos from './componentes/Terminos';
 
@@ -11,7 +9,8 @@ function App() {
         <ComponenteInput 
           label="Nombre Completo"
           placeholder="Juan Perez"
-          id="nombre"/>
+          id="nombre"
+          name="nombre"/>
         <ComponenteInput 
           label="Ciudad"
           placeholder="Ingrese ciudad"
