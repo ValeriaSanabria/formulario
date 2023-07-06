@@ -6,6 +6,8 @@ div{
     left: 0;
     background: rgb(0, 0, 0, .5);
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
@@ -16,5 +18,43 @@ div{
     border-radius: 5px;
     box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
     padding: 20px;
+}
 
+.encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 16px;
+    color: #1766DC;
+}
+
+button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    color: #1766DC;
+}
+
+button:hover{
+    background: #f2f2f2;
+}
+
+.boton{
+height: 100%;
+width: 100%;
 }
