@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './formularios.css';
 
 
-
 const ComponenteInput = (props) =>{
 
     const [datos, setDatos] = useState ({
